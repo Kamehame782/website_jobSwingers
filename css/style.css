@@ -1,0 +1,17 @@
+form{
+    text-align: center;
+}
+ul >  li{
+    list-style-type: circle;
+    padding:2px;
+}
+form select{
+    width: 230px !important;
+    display: inline-block !important;
+}
+#varoitus{
+    color: red;
+    text-align: center;
+    padding-bottom: 15px;
+    display:none;
+}

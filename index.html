@@ -1,0 +1,66 @@
+<!-- Bootstrap tutorial -->
+<!-- https://www.youtube.com/playlist?list=PL4cUxeGkcC9jE_cGvLLC60C_PeF_24pvv -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- My css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- Title -->
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container text-center">
+        <h1 class="display-3">Job Swingers</h1>
+        <p class="lead">On this website you can find a person that goes from A city to B city for work. If you go from B city to A city for work we will match you two so that you can exchange jobs and you can work in your own city.</p>
+        </div>
+    </div>
+
+    <!-- Form to add or search work swingers -->
+    <div class="container">
+        <div id="varoitus">TÄYTÄ KAIKKI KOHDAT!</div>
+        <form action="" class="justify-content-center py-3" id="formi">
+            <select class="form-control form-control-lg form-group" id="city_home" onchange="display_workers_kotikaupunki(this)">
+                <option>Valitse kotikaupunki</option>
+            </select>
+            <select class="form-control form-control-lg form-group" id="city_work" onchange="display_workers_tyokaupunki(this)">
+                <option>Valitse työkaupunki</option>
+            </select>
+            <select class="form-control form-control-lg form-group" id="job" onchange="display_workers_tyo(this)">
+                <option>Valitse Työnkuva</option>
+            </select>
+            <input type="text" id="name" class="form-contro form-control-lg" placeholder="Oma nimi">
+            <div class="blockquote-footer pb-3">Voit jättää oman ilmoituksesi täyttämällä kaikki kohdat, lisäämällä nimesi ja klikkaamalla "Lisää OMA ilmoituksesi"</div>
+            <button type="button" class="btn btn-secondary" onclick="window.location.reload()">Hae ilmoitukset</button>
+            <button type="button" class="btn btn-secondary" onclick="addWorker()" id="lisaa">Lisää <strong>OMA</strong> ilmoituksesi</button>
+            
+        </form>
+
+        <!-- Workers list -->
+        <ul id="workers" class="list-group"></ul>
+
+        <!-- <div class="row" style="background: lightblue;">
+            <div class="col-2">nimi</div>
+            <div class="col-2">kaupunki koti</div>
+            <div class="col-2">kaupunki työ</div>
+            <div class="col-6">työ</div>
+        </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- My js -->
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
